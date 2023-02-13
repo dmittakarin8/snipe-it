@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('scan') {
       steps {
-        sh "docker run -v ${WORKSPACE}:/src --workdir /src returntocorp/semgrep-agent:v1 semgrep-agent --config auto --json"
+        sh "docker run -v ${WORKSPACE}:/src --workdir /src returntocorp/semgrep semgrep ci --config auto --json --output findings.json"
       }
     }
   }
