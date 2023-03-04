@@ -4,7 +4,7 @@ pipeline {
     stage('scan') {
       steps {
         catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-          sh "docker run -v ${WORKSPACE}:/src --workdir /src returntocorp/semgrep semgrep ci --config auto --json --output snipe-it-findings.json"
+          sh "docker run -v ${WORKSPACE}:/src --workdir /src returntocorp/semgrep semgrep ci --config auto --json --output FISMAID12345-Snipe.json"
         }
       }
     }
