@@ -10,7 +10,7 @@ pipeline {
     }
     stage('Move Output') {
       steps {
-        sh 'mv snipe-it-findings.json /bitnami/jenkins/home/workspace/semgrep_output/'
+        sh 'mv FISMAID12345-Snipe.json /bitnami/jenkins/home/workspace/semgrep_output/'
       }
     }
   }
